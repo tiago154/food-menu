@@ -1,0 +1,24 @@
+{
+  "menus": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "title": "Cardápio"
+    },
+    {
+      "id": 2,
+      "restaurantId": 2,
+      "title": "Menu"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Taverna do Erick"
+    },
+    {
+      "id": 2,
+      "name": "Pastelaria Angular"
+    }
+  ]
+}
