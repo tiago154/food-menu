@@ -29,3 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Adicionando Angular Material
 
 `ng add @angular/material`
+
+## Criando um novo component
+
+`ng generate component components/template/header`
+
+ou
+
+`ng g c components/template/header`
