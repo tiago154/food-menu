@@ -37,3 +37,109 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ou
 
 `ng g c components/template/header`
+
+## Conceitos Angular
+
+### Directives
+
+#### Attribute Directives
+
+Altera a **aparência** e o **comportamento** de um elemento, componente ou outra diretiva
+
+```ts
+@directive({
+  selector: '[appRed]'
+})
+export class RedDirective {
+
+  constructor(el: ElementRef) {
+    el.nativeElement.style.color = '#E35E6B'
+  }
+}
+```
+
+```html
+<i class="material-icons" appRed>
+  favorite
+</i>
+```
+
+#### Structural Directives
+
+Altera o layout **adicionando** e **removendo** elementos da **DOM**
+
+```html
+<form *ngIf="product">
+</form>
+```
+
+```html
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }}
+  </li>
+</ul>
+```
+
+### Property Binding
+
+```html
+<table [dataSource]="products">
+</table>
+```
+
+```ts
+@Component({
+  selector: 'app-product-read',
+  templateUrl: './product-read.component.html',
+  styleUrls: ['./product-read.component.css']
+})
+export class HeaderComponent implements OnInit {
+  products: Product[]
+}
+```
+
+### Event Binding
+
+```html
+<button mat-raised-button (click)="createProduct()" color="primary">
+  Salvar
+</button>
+```
+
+```ts
+@Component({
+  selector: 'app-product-create',
+  templateUrl: './product-create.component.html',
+  styleUrls: ['./product-create.component.css']
+})
+export class HeaderComponent implements OnInit {
+  createProduct(): void {
+    // ....
+  }
+}
+```
+
+### One Way Data Binding
+
+Component -> HTML
+
+```ts
+nome: string;
+```
+
+```html
+<input [value]="nome">
+```
+
+### Two Way Data Binding
+
+Component <- -> HTML
+
+```ts
+nome: string;
+```
+
+```html
+<input [(ngModel)]="nome">
+```
