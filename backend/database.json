@@ -2,16 +2,16 @@
   "menus": [
     {
       "id": 1,
-      "restaurantId": 1,
+      "establishmentId": 1,
       "title": "Cardápio"
     },
     {
       "id": 2,
-      "restaurantId": 2,
+      "establishmentId": 2,
       "title": "Menu"
     }
   ],
-  "restaurants": [
+  "establishments": [
     {
       "id": 1,
       "name": "Taverna do Erick"
