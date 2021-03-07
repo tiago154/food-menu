@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/025bcd66-207c-4432-b6f2-8c16e9c11652/deploy-status)](https://app.netlify.com/sites/food-menu-angular/deploys)
+
 # FoodMenu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
