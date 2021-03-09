@@ -13,8 +13,13 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatListModule } from '@angular/material/list'
 import { HomeComponent } from './views/home/home.component'
-import { MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card'
 import { EstablishmentCrudComponent } from './views/establishment-crud/establishment-crud.component'
+import { RedDirective } from './directives/red.directive'
+import { ForDirective } from './directives/for.directive'
+import { EstablishmentCreateComponent } from './components/establishment/establishment-create/establishment-create.component'
+import { MatButtonModule } from '@angular/material/button'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { EstablishmentCrudComponent } from './views/establishment-crud/establish
     FooterComponent,
     NavComponent,
     HomeComponent,
-    EstablishmentCrudComponent
+    EstablishmentCrudComponent,
+    RedDirective,
+    ForDirective,
+    EstablishmentCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,9 @@ import { EstablishmentCrudComponent } from './views/establishment-crud/establish
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

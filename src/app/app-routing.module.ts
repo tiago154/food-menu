@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { HomeComponent } from './views/home/home.component'
 import { EstablishmentCrudComponent } from './views/establishment-crud/establishment-crud.component'
+import { EstablishmentCreateComponent } from './components/establishment/establishment-create/establishment-create.component'
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'establishments',
     component: EstablishmentCrudComponent
+  },
+  {
+    path: 'establishments/create',
+    component: EstablishmentCreateComponent
   }
 ]
 
