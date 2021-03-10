@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { EstablishmentCreateComponent } from './establishment-create.component';
+import { EstablishmentCreateComponent } from './establishment-create.component'
 
 describe('EstablishmentCreateComponent', () => {
-  let component: EstablishmentCreateComponent;
-  let fixture: ComponentFixture<EstablishmentCreateComponent>;
+  let component: EstablishmentCreateComponent
+  let fixture: ComponentFixture<EstablishmentCreateComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EstablishmentCreateComponent ]
     })
-    .compileComponents();
-  });
+    .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EstablishmentCreateComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(EstablishmentCreateComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

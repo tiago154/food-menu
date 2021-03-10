@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core'
 import { MatSnackBar } from '@angular/material/snack-bar'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
+import { Establishment } from './establishment.model'
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class EstablishmentService {
 
-  constructor(private snackBar: MatSnackBar) { }
+  // Procurar forma melhor de carregar as variaveis de ambiente
+  private baseUrl = environment.foodApiHost
+
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient
+  ) { }
 
   showMessage(message: string): void {
     this.snackBar.open(
@@ -18,5 +28,9 @@ export class EstablishmentService {
         verticalPosition: 'top'
       }
     )
+  }
+
+  create(establishment: Establishment): Observable<Establishment> {
+    return this.http.post<Establishment>(`${this.baseUrl}/establishments`, establishment)
   }
 }

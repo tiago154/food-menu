@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { Establishment } from '../establishment.model'
 import { EstablishmentService } from '../establishment.service'
 
 @Component({
@@ -18,7 +19,14 @@ export class EstablishmentCreateComponent implements OnInit {
   }
 
   createEstablishment(): void {
-    this.establishmentService.showMessage('Operação executada')
+    const establishmentTest: Establishment = {
+      name: 'Teste'
+    }
+
+    this.establishmentService.create(establishmentTest).subscribe(() => {
+      this.establishmentService.showMessage('Operação executada')
+      this.router.navigate(['/establishments'])
+    })
   }
 
   cancel(): void {

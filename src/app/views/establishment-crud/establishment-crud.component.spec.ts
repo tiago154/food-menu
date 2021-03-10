@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { EstablishmentCrudComponent } from './establishment-crud.component';
+import { EstablishmentCrudComponent } from './establishment-crud.component'
 
 describe('EstablishmentCrudComponent', () => {
-  let component: EstablishmentCrudComponent;
-  let fixture: ComponentFixture<EstablishmentCrudComponent>;
+  let component: EstablishmentCrudComponent
+  let fixture: ComponentFixture<EstablishmentCrudComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EstablishmentCrudComponent ]
     })
-    .compileComponents();
-  });
+    .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EstablishmentCrudComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(EstablishmentCrudComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
