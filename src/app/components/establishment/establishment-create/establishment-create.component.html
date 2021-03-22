@@ -1,7 +1,18 @@
-<button mat-raised-button (click)="createEstablishment()" color="primary">
-  Salvar
-</button>
+<mat-card>
+  <mat-card-title>Novo Estabelecimento</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="establishment.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tipo">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="createEstablishment()" color="primary">
+    Salvar
+  </button>
 
-<button mat-raised-button (click)="cancel()">
-  Cancelar
-</button>
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>

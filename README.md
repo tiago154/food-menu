@@ -145,3 +145,15 @@ nome: string;
 ```html
 <input [(ngModel)]="nome">
 ```
+
+### Schematics
+
+É um template que gera código para instruções complexas.
+
+https://angular.io/guide/schematics
+
+Exemplo: Podemos criar um componente de tabela, que fica responsável de mostrar uma lista de dados, com paginação e ordenação.
+
+```sh
+ng generate @angular/material:table <nome do componente>
+```

@@ -10,6 +10,10 @@ import { EstablishmentService } from '../establishment.service'
 })
 export class EstablishmentCreateComponent implements OnInit {
 
+  establishment: Establishment = {
+    name: ''
+  }
+
   constructor(
     private establishmentService: EstablishmentService,
     private router: Router
@@ -19,11 +23,7 @@ export class EstablishmentCreateComponent implements OnInit {
   }
 
   createEstablishment(): void {
-    const establishmentTest: Establishment = {
-      name: 'Teste'
-    }
-
-    this.establishmentService.create(establishmentTest).subscribe(() => {
+    this.establishmentService.create(this.establishment).subscribe(() => {
       this.establishmentService.showMessage('Operação executada')
       this.router.navigate(['/establishments'])
     })

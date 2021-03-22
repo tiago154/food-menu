@@ -1,26 +1,30 @@
+import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { MatButtonModule } from '@angular/material/button'
+import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { MatListModule } from '@angular/material/list'
+import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatSortModule } from '@angular/material/sort'
+import { MatTableModule } from '@angular/material/table'
+import { MatToolbarModule } from '@angular/material/toolbar'
 import { BrowserModule } from '@angular/platform-browser'
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { HeaderComponent } from './components/template/header/header.component'
-
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { FooterComponent } from './components/template/footer/footer.component'
-import { NavComponent } from './components/template/nav/nav.component'
-
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list'
-import { HomeComponent } from './views/home/home.component'
-import { MatCardModule } from '@angular/material/card'
-import { EstablishmentCrudComponent } from './views/establishment-crud/establishment-crud.component'
-import { RedDirective } from './directives/red.directive'
-import { ForDirective } from './directives/for.directive'
 import { EstablishmentCreateComponent } from './components/establishment/establishment-create/establishment-create.component'
-import { MatButtonModule } from '@angular/material/button'
-import { MatSnackBarModule } from '@angular/material/snack-bar'
-import { HttpClientModule } from '@angular/common/http'
+import { EstablishmentReadComponent } from './components/establishment/establishment-read/establishment-read.component'
+import { FooterComponent } from './components/template/footer/footer.component'
+import { HeaderComponent } from './components/template/header/header.component'
+import { NavComponent } from './components/template/nav/nav.component'
+import { ForDirective } from './directives/for.directive'
+import { RedDirective } from './directives/red.directive'
+import { EstablishmentCrudComponent } from './views/establishment-crud/establishment-crud.component'
+import { HomeComponent } from './views/home/home.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http'
     EstablishmentCrudComponent,
     RedDirective,
     ForDirective,
-    EstablishmentCreateComponent
+    EstablishmentCreateComponent,
+    EstablishmentReadComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,13 @@ import { HttpClientModule } from '@angular/common/http'
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

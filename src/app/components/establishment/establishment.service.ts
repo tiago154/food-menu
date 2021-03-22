@@ -33,4 +33,8 @@ export class EstablishmentService {
   create(establishment: Establishment): Observable<Establishment> {
     return this.http.post<Establishment>(`${this.baseUrl}/establishments`, establishment)
   }
+
+  read(): Observable<Establishment[]> {
+    return this.http.get<Establishment[]>(`${this.baseUrl}/establishments`)
+  }
 }
