@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Excluir Estabelecimento</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [value]="establishment.name" name="name" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tipo" disabled>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="deleteEstablishment()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { HeaderService } from '../../template/header/header.service'
 import { Establishment } from '../establishment.model'
 import { EstablishmentService } from '../establishment.service'
 
@@ -16,8 +17,15 @@ export class EstablishmentCreateComponent implements OnInit {
 
   constructor(
     private establishmentService: EstablishmentService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private headerService: HeaderService
+  ) {
+    this.headerService.headerData = {
+      title: 'Estabelecimentos > Novo estabelecimento',
+      icon: 'restaurant_menu',
+      routeUrl: '/establishments'
+    }
+  }
 
   ngOnInit(): void {
   }

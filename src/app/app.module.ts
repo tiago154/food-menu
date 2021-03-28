@@ -24,7 +24,9 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { ForDirective } from './directives/for.directive'
 import { RedDirective } from './directives/red.directive'
 import { EstablishmentCrudComponent } from './views/establishment-crud/establishment-crud.component'
-import { HomeComponent } from './views/home/home.component'
+import { HomeComponent } from './views/home/home.component';
+import { EstablishmentUpdateComponent } from './components/establishment/establishment-update/establishment-update.component';
+import { EstablishmentDeleteComponent } from './components/establishment/establishment-delete/establishment-delete.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { HomeComponent } from './views/home/home.component'
     RedDirective,
     ForDirective,
     EstablishmentCreateComponent,
-    EstablishmentReadComponent
+    EstablishmentReadComponent,
+    EstablishmentUpdateComponent,
+    EstablishmentDeleteComponent
   ],
   imports: [
     BrowserModule,

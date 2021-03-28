@@ -11,7 +11,7 @@ export class EstablishmentReadComponent implements OnInit {
 
   establishments: Establishment[]
 
-  displayedColumns: string[] = ['id', 'name']
+  displayedColumns: string[] = ['id', 'name', 'action']
 
   constructor(private establishmentService: EstablishmentService) { }
 
